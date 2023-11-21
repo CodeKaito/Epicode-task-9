@@ -22,7 +22,7 @@ function boundary(num) {
 function reverseString(string) {
     let newArray = [];
     let result = '';
-    for (let i = string.length - 1; i > 0; i--) {
+    for (let i = string.length - 1; i >= 0; i--) {
         newArray.push(string[i]);
         result = newArray.join('');
     };
