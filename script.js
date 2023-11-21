@@ -50,10 +50,9 @@ function area(l1,l2) {
 */
 
 function crazyDiff(input) {
- const val = 19;
- let calc = input - val;
- return (calc > val) ?  calc*3 : null;
-}
+    let calc = Math.abs(input - 19);
+    return (calc > 19) ?  calc*3 : calc;
+   }
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
