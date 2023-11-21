@@ -54,7 +54,13 @@ function upperFirst2(string) {
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function giveMeRandom(n) {
+        let result = [];
+        for (let i = 0; i < n; i++) {
+            result.push(Math.floor(Math.random()*10));
+        } 
+        return result;
+    }
 
 //EXTRA:
 /* ESERCIZIO 1
@@ -80,7 +86,10 @@ function crazyDiff(input) {
  La funzione deve aggiungere la parola "code" all'inizio della stringa fornita e ritornare il risultato, ma se la stringa fornita comincia proprio con "code" allora deve ritornarla senza modifiche.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function codify(input) {
+    const string = "code";
+    return (input.startsWith(string)) ? input : string + input;
+ }
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "check3and7" la quale accetta un numero intero positivo come parametro.
