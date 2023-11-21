@@ -44,14 +44,16 @@ function area(l1,l2) {
  return (l1 === l2) ? l1*l2 : (l1*l2)/2;
 }
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "crazyDiff" che calcola la differenza assoluta tra un numero fornito e 19.
  Se il valore calcolato è più grande di 19, la funzione deve tornare tale risultato moltiplicato per 3.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function crazyDiff(input) {
+ const val = 19;
+ let calc = input - val;
+ return (calc > val) ?  calc*3 : null;
+}
 
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "codify" che accetta una stringa come parametro.
