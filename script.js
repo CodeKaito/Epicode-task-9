@@ -20,8 +20,14 @@ function boundary(num) {
 */
 
 function reverseString(string) {
- return string.reverse();
-}
+    let newArray = [];
+    let result = '';
+    for (let i = string.length - 1; i > 0; i--) {
+        newArray.push(string[i]);
+        result = newArray.join('');
+    };
+    return result;
+   }
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
