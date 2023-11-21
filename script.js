@@ -27,7 +27,22 @@ function reverseString(string) {
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function upperFirst2(string) {
+        const posizioneSpace = string.indexOf(' ');
+        if (posizioneSpace !== -1) {
+            // Se c'è uno spazio nella stringa
+            const posizioneAfterSpace = posizioneSpace + 1;
+            string = string.charAt(0).toUpperCase() + string.slice(1, posizioneAfterSpace) + string.charAt(posizioneAfterSpace).toUpperCase() + string.slice(posizioneAfterSpace + 1);
+        } else {
+            // Se non c'è uno spazio nella stringa
+            string = string.charAt(0).toUpperCase() + string.slice(1);
+        }
+    
+        return string;
+    }
+
+    let output = upperFirst2("string hello");
+    console.log(output);
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
