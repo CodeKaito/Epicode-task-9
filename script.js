@@ -38,21 +38,15 @@ function reverseString(string) {
 */
 
 function upperFirst(string) {
-        const posizioneSpace = string.indexOf(' ');
-        if (posizioneSpace !== -1) {
-            // Se c'è uno spazio nella stringa
-            const posizioneAfterSpace = posizioneSpace + 1;
-            string = string.charAt(0).toUpperCase() + string.slice(1, posizioneAfterSpace) + string.charAt(posizioneAfterSpace).toUpperCase() + string.slice(posizioneAfterSpace + 1);
-        } else {
-            // Se non c'è uno spazio nella stringa
-            string = string.charAt(0).toUpperCase() + string.slice(1);
+    let array = string.split(` `);
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        if(array[i][0] === array[i][0].toLowerCase()) {
+            result.push(array[i][0].toUpperCase() + array[i].slice(1));
         }
-    
-        return string;
     }
-
-    let output = upperFirst("string hello");
-    console.log(output);
+    return result.join(" ");
+}
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
@@ -114,11 +108,8 @@ function check3and7(num) {
 */
 
 function cutString(string) {
- if (typeof string === "string") {
-  string.pop();
-  let newString = string.slice(1,1);
-  return newString;
- } else {
-  console.log("Errore, inserisci una stringa");
- }
+ if (typeof string !== "string") {
+    return console.log("Errore, inserisci una stringa");
+     }
+     return string.slice(1, string.length - 1);
 }
