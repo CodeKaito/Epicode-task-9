@@ -22,18 +22,22 @@ function boundary(num) {
 function reverseString(string) {
     let newArray = [];
     let result = '';
-    for (let i = string.length - 1; i >= 0; i--) {
+    if (typeof === "string") {
+     for (let i = string.length - 1; i >= 0; i--) {
         newArray.push(string[i]);
         result = newArray.join('');
+     };
+     return result;
+    } else {
+     console.log("Input errato, inserisci una stringa")
     };
-    return result;
    }
 
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
-function upperFirst2(string) {
+function upperFirst(string) {
         const posizioneSpace = string.indexOf(' ');
         if (posizioneSpace !== -1) {
             // Se c'è uno spazio nella stringa
@@ -47,7 +51,7 @@ function upperFirst2(string) {
         return string;
     }
 
-    let output = upperFirst2("string hello");
+    let output = upperFirst("string hello");
     console.log(output);
 
 /* ESERCIZIO 5
@@ -97,10 +101,24 @@ function codify(input) {
  SUGGERIMENTO: operatore modulo
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function check3and7(num) {
+ if (typeof num === "number") { 
+  return (num%3 === 0 || num%7 === 0) ? true : false;
+ } else {
+  console.log("Errore, inserisci un numero");
+ }
+}
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "cutString", che accetta una stringa come parametro e la ritorna senza il primo e l'ultimo carattere.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+function cutString(string) {
+ if (typeof string === "string") {
+  string.pop();
+  let newString = string.slice(1,1);
+  return newString;
+ } else {
+  console.log("Errore, inserisci una stringa");
+ }
+}
