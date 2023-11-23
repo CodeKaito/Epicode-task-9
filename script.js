@@ -4,6 +4,10 @@
 */
 
 function crazySum(first, second) {
+ if (typeof first !== "number" || second !== "number") {
+          console.log("Input errato, inserisci un numero");
+          return; // Exit the function if input is not a string
+        }
  return (first !== second) ? first+second : (first+second)*3;
 }
 
